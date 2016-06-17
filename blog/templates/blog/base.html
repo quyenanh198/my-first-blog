@@ -2,7 +2,7 @@
 
 <html lang="en">
     <head>
-        <title>Quyen Anh's blog</title>
+        <title>Quyền Anh's blog</title>
 
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-them.min.css">
@@ -13,6 +13,9 @@
     </head>
     <body>
         <div class="page-header">
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="top_menu"><span class="glyphicon glyphicon-plus"></span></a>
+            {% endif %}
             <h1><a href="">Quyen Anh's blog</a></h1>
         </div>
 
